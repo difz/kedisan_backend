@@ -19,7 +19,7 @@ const about = {
             options: {
                 layout: 'grid',
             },
-            validation: (Rule: any) => Rule.max(2),
+            validation: (Rule: any) => Rule.max(1),
         }
     ],
 };
