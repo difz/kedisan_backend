@@ -1,5 +1,5 @@
 import about  from './about'
 import tourPackege from './tourPackage'
-import toga from './toga'
+import pinLocation from './pinLocation'
 
-export const schemaTypes = [about, tourPackege, toga]
+export const schemaTypes = [about, tourPackege, pinLocation];

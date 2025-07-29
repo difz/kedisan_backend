@@ -1,6 +1,6 @@
 const tourPackage = {
     name: 'tourPackage',
-    tittle: 'Tour Package',
+    title: 'Tour Package', // ✅ PERBAIKI INI
     type: 'document',
     fields: [
         {
@@ -13,7 +13,7 @@ const tourPackage = {
             name: 'description',
             title: 'Description',
             type: 'text',
-            validation: (Rule:any) => Rule.required(),
+            validation: (Rule: any) => Rule.required(),
         },
         {
             name: 'language',
@@ -21,27 +21,35 @@ const tourPackage = {
             type: 'array',
             of: [{ type: 'string' }],
             options: {
-            layout: 'tags',
-        },
+                layout: 'tags',
+            },
             validation: (Rule: any) => Rule.required(),
         },
-
         {
             name: 'duration',
             title: 'Duration',
             type: 'number',
-            validation: (Rule:any) => Rule.required(),
+            validation: (Rule: any) => Rule.required(),
         },
         {
             name: 'images',
-            title: 'images',
+            title: 'Images',
             type: 'array',
             of: [{ type: 'image' }],
-            option: {
+            options: {
                 layout: 'grid',
             },
             validation: (Rule: any) => Rule.max(4).required(),
         },
+        {
+            name: "link",
+            title: "Link",
+            type: "url",
+            validation: (Rule: any) => Rule.uri({
+                scheme: ['http', 'https'],
+                allowRelative: true,
+            }),
+        }
     ],
 };
 
