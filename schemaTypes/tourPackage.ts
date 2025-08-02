@@ -26,6 +26,12 @@ const tourPackage = {
             validation: (Rule: any) => Rule.required(),
         },
         {
+            name: 'price',
+            title: 'Price',
+            type: 'number',
+            validation: (Rule: any) => Rule.required(),
+        },
+        {
             name: 'duration',
             title: 'Duration',
             type: 'number',
